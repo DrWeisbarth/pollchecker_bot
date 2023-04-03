@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  poll_checker:
+    build: ./
+    environment:
+      POLL_CHECKER_BOT_TOKEN: <enter Bot Token here>
+      MONGO_DB_CONNECTION_STRING: <enter Mongo DB Connection String here>
+    command: python main.py
+    depends_on:
+      - mongodb_container
+
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: <enter MongoDB username here>
+      MONGO_INITDB_ROOT_PASSWORD: <enter MongoDB password here>
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+
+volumes:
+  mongodb_data_container:

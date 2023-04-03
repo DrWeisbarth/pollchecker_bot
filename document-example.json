@@ -1,0 +1,10 @@
+{
+  "userid": "id",
+  "is_setting_list": true,
+  "timestamp_setting_list": "",
+  "list": [
+    "name 1",
+    "name 2",
+    "name 3"
+  ]
+}
