@@ -4,6 +4,12 @@ Der Bot bietet die Möglichkeit, Nachrichten auf Schlüsselworte zu durchsuchen.
 
 ## Entwicklung und Deployment
 
+### git
+
+Als Versionskontrolle wird git verwendet.
+
+WICHTIG: Sensible Daten wie Bot Api Tokens und ähnliches sollten niemals in das git remote repository hochgeladen werden. Dies kann verhindert werden, indem nach dem Ändern der entsprechenden Datei mit dem Befehl `git update-index --assume-unchanged FILE_NAME` die entsprechende Datei als unverändert markiert wird (beispielsweise docker-compose.yml, nachdem man dort die Tokens eingetragen hat). Mit `git update-index --no-assume-unchanged FILE_NAME` kann die Datei dann wieder hochgeladen werden.
+
 ### Virtuelle Umgebung Python
 
 Es wird empfohlen, eine virtuelle Umgebung für Python zu nutzen. 
