@@ -74,7 +74,4 @@ def search_missing_strings(id: str, message: str) -> str:
 
 
 if __name__ == "__main__":
-    try:
-        bot.polling(skip_pending=True, timeout=60, non_stop=True)
-    except Exception as e:
-        print(e)
+    bot.polling(skip_pending=True, timeout=60, non_stop=True)
